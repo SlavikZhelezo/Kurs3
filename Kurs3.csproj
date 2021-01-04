@@ -65,6 +65,12 @@
     <Compile Include="EditAdmin.Designer.cs">
       <DependentUpon>EditAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditDirecct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDirecct.Designer.cs">
+      <DependentUpon>EditDirecct.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditAdmin.resx">
       <DependentUpon>EditAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDirecct.resx">
+      <DependentUpon>EditDirecct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OperForm.resx">
       <DependentUpon>OperForm.cs</DependentUpon>

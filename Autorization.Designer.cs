@@ -92,6 +92,7 @@
             this.enterButton.TabStop = false;
             this.enterButton.Text = "Вход";
             this.enterButton.UseVisualStyleBackColor = true;
+            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // loginField
             // 

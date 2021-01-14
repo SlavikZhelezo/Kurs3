@@ -593,5 +593,12 @@ namespace Kurs3
                 }
             }
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Autorization autor = new Autorization();
+            autor.Show();
+            this.Hide();
+        }
     }
 }

@@ -86,6 +86,20 @@
             this.StaffEdit = new System.Windows.Forms.Label();
             this.StaffAdd = new System.Windows.Forms.Label();
             this.tarifPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.editUserButton = new System.Windows.Forms.Button();
+            this.addUserButton = new System.Windows.Forms.Button();
+            this.positionCombo = new System.Windows.Forms.ComboBox();
+            this.rulesLabel = new System.Windows.Forms.Label();
+            this.passwordText = new System.Windows.Forms.TextBox();
+            this.userText = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.Label();
+            this.labelUser = new System.Windows.Forms.Label();
+            this.deleteUserButton = new System.Windows.Forms.Button();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.editRules = new System.Windows.Forms.RadioButton();
+            this.deleteUser = new System.Windows.Forms.RadioButton();
+            this.addUser = new System.Windows.Forms.RadioButton();
             this.tarifwork = new System.Windows.Forms.Panel();
             this.textTarifValue = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,20 +124,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelUser = new System.Windows.Forms.Panel();
-            this.addUser = new System.Windows.Forms.RadioButton();
-            this.deleteUser = new System.Windows.Forms.RadioButton();
-            this.editRules = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.labelUser = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.Label();
-            this.userText = new System.Windows.Forms.TextBox();
-            this.passwordText = new System.Windows.Forms.TextBox();
-            this.rulesLabel = new System.Windows.Forms.Label();
-            this.positionCombo = new System.Windows.Forms.ComboBox();
-            this.addUserButton = new System.Windows.Forms.Button();
-            this.editUserButton = new System.Windows.Forms.Button();
-            this.deleteUserButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Label();
             this.MenuPanel.SuspendLayout();
             this.dataPanel.SuspendLayout();
             this.EditPanel.SuspendLayout();
@@ -135,16 +136,17 @@
             this.addStaff.SuspendLayout();
             this.StaffChanged.SuspendLayout();
             this.tarifPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelUser.SuspendLayout();
             this.tarifwork.SuspendLayout();
             this.tarifAddPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelUser.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.MenuPanel.Controls.Add(this.exitButton);
             this.MenuPanel.Controls.Add(this.userLabel);
             this.MenuPanel.Controls.Add(this.tarifButton);
             this.MenuPanel.Controls.Add(this.staffButton);
@@ -766,6 +768,164 @@
             this.tarifPanel.Size = new System.Drawing.Size(600, 450);
             this.tarifPanel.TabIndex = 10;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.editUserButton);
+            this.panel2.Controls.Add(this.addUserButton);
+            this.panel2.Controls.Add(this.positionCombo);
+            this.panel2.Controls.Add(this.rulesLabel);
+            this.panel2.Controls.Add(this.passwordText);
+            this.panel2.Controls.Add(this.userText);
+            this.panel2.Controls.Add(this.password);
+            this.panel2.Controls.Add(this.labelUser);
+            this.panel2.Controls.Add(this.deleteUserButton);
+            this.panel2.Location = new System.Drawing.Point(16, 82);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(569, 340);
+            this.panel2.TabIndex = 26;
+            // 
+            // editUserButton
+            // 
+            this.editUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.editUserButton.Location = new System.Drawing.Point(398, 263);
+            this.editUserButton.Name = "editUserButton";
+            this.editUserButton.Size = new System.Drawing.Size(151, 49);
+            this.editUserButton.TabIndex = 7;
+            this.editUserButton.Text = "Изменить";
+            this.editUserButton.UseVisualStyleBackColor = true;
+            this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
+            // 
+            // addUserButton
+            // 
+            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.addUserButton.Location = new System.Drawing.Point(398, 263);
+            this.addUserButton.Name = "addUserButton";
+            this.addUserButton.Size = new System.Drawing.Size(151, 49);
+            this.addUserButton.TabIndex = 6;
+            this.addUserButton.Text = "Добавить";
+            this.addUserButton.UseVisualStyleBackColor = true;
+            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
+            // 
+            // positionCombo
+            // 
+            this.positionCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.positionCombo.FormattingEnabled = true;
+            this.positionCombo.Items.AddRange(new object[] {
+            "Директор",
+            "Администратор",
+            "Оператор"});
+            this.positionCombo.Location = new System.Drawing.Point(195, 116);
+            this.positionCombo.Name = "positionCombo";
+            this.positionCombo.Size = new System.Drawing.Size(215, 28);
+            this.positionCombo.TabIndex = 5;
+            this.positionCombo.SelectedIndexChanged += new System.EventHandler(this.positionCombo_SelectedIndexChanged);
+            // 
+            // rulesLabel
+            // 
+            this.rulesLabel.AutoSize = true;
+            this.rulesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.rulesLabel.Location = new System.Drawing.Point(60, 119);
+            this.rulesLabel.Name = "rulesLabel";
+            this.rulesLabel.Size = new System.Drawing.Size(104, 22);
+            this.rulesLabel.TabIndex = 4;
+            this.rulesLabel.Text = "Должность";
+            // 
+            // passwordText
+            // 
+            this.passwordText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.passwordText.Location = new System.Drawing.Point(195, 70);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.Size = new System.Drawing.Size(215, 27);
+            this.passwordText.TabIndex = 3;
+            // 
+            // userText
+            // 
+            this.userText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.userText.Location = new System.Drawing.Point(195, 26);
+            this.userText.Name = "userText";
+            this.userText.Size = new System.Drawing.Size(215, 27);
+            this.userText.TabIndex = 2;
+            // 
+            // password
+            // 
+            this.password.AutoSize = true;
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.password.Location = new System.Drawing.Point(92, 70);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(72, 22);
+            this.password.TabIndex = 1;
+            this.password.Text = "Пароль";
+            // 
+            // labelUser
+            // 
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.labelUser.Location = new System.Drawing.Point(36, 28);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(128, 22);
+            this.labelUser.TabIndex = 0;
+            this.labelUser.Text = "Пользователь";
+            // 
+            // deleteUserButton
+            // 
+            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.deleteUserButton.Location = new System.Drawing.Point(398, 263);
+            this.deleteUserButton.Name = "deleteUserButton";
+            this.deleteUserButton.Size = new System.Drawing.Size(151, 49);
+            this.deleteUserButton.TabIndex = 8;
+            this.deleteUserButton.Text = "Удалить";
+            this.deleteUserButton.UseVisualStyleBackColor = true;
+            this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
+            // 
+            // panelUser
+            // 
+            this.panelUser.Controls.Add(this.editRules);
+            this.panelUser.Controls.Add(this.deleteUser);
+            this.panelUser.Controls.Add(this.addUser);
+            this.panelUser.Location = new System.Drawing.Point(24, 9);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(554, 62);
+            this.panelUser.TabIndex = 10;
+            // 
+            // editRules
+            // 
+            this.editRules.AutoSize = true;
+            this.editRules.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.editRules.Location = new System.Drawing.Point(311, 18);
+            this.editRules.Name = "editRules";
+            this.editRules.Size = new System.Drawing.Size(165, 26);
+            this.editRules.TabIndex = 2;
+            this.editRules.TabStop = true;
+            this.editRules.Text = "Изменить права";
+            this.editRules.UseVisualStyleBackColor = true;
+            this.editRules.CheckedChanged += new System.EventHandler(this.editRules_CheckedChanged);
+            // 
+            // deleteUser
+            // 
+            this.deleteUser.AutoSize = true;
+            this.deleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.deleteUser.Location = new System.Drawing.Point(183, 18);
+            this.deleteUser.Name = "deleteUser";
+            this.deleteUser.Size = new System.Drawing.Size(98, 26);
+            this.deleteUser.TabIndex = 1;
+            this.deleteUser.TabStop = true;
+            this.deleteUser.Text = "Удалить";
+            this.deleteUser.UseVisualStyleBackColor = true;
+            this.deleteUser.CheckedChanged += new System.EventHandler(this.deleteUser_CheckedChanged);
+            // 
+            // addUser
+            // 
+            this.addUser.AutoSize = true;
+            this.addUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.addUser.Location = new System.Drawing.Point(26, 17);
+            this.addUser.Name = "addUser";
+            this.addUser.Size = new System.Drawing.Size(109, 26);
+            this.addUser.TabIndex = 0;
+            this.addUser.TabStop = true;
+            this.addUser.Text = "Добавить";
+            this.addUser.UseVisualStyleBackColor = true;
+            this.addUser.CheckedChanged += new System.EventHandler(this.addUser_CheckedChanged);
+            // 
             // tarifwork
             // 
             this.tarifwork.Controls.Add(this.textTarifValue);
@@ -1019,163 +1179,15 @@
             this.label3.Text = "Добавить";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // panelUser
+            // exitButton
             // 
-            this.panelUser.Controls.Add(this.editRules);
-            this.panelUser.Controls.Add(this.deleteUser);
-            this.panelUser.Controls.Add(this.addUser);
-            this.panelUser.Location = new System.Drawing.Point(24, 9);
-            this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(554, 62);
-            this.panelUser.TabIndex = 10;
-            // 
-            // addUser
-            // 
-            this.addUser.AutoSize = true;
-            this.addUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.addUser.Location = new System.Drawing.Point(26, 17);
-            this.addUser.Name = "addUser";
-            this.addUser.Size = new System.Drawing.Size(109, 26);
-            this.addUser.TabIndex = 0;
-            this.addUser.TabStop = true;
-            this.addUser.Text = "Добавить";
-            this.addUser.UseVisualStyleBackColor = true;
-            this.addUser.CheckedChanged += new System.EventHandler(this.addUser_CheckedChanged);
-            // 
-            // deleteUser
-            // 
-            this.deleteUser.AutoSize = true;
-            this.deleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.deleteUser.Location = new System.Drawing.Point(183, 18);
-            this.deleteUser.Name = "deleteUser";
-            this.deleteUser.Size = new System.Drawing.Size(98, 26);
-            this.deleteUser.TabIndex = 1;
-            this.deleteUser.TabStop = true;
-            this.deleteUser.Text = "Удалить";
-            this.deleteUser.UseVisualStyleBackColor = true;
-            this.deleteUser.CheckedChanged += new System.EventHandler(this.deleteUser_CheckedChanged);
-            // 
-            // editRules
-            // 
-            this.editRules.AutoSize = true;
-            this.editRules.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.editRules.Location = new System.Drawing.Point(311, 18);
-            this.editRules.Name = "editRules";
-            this.editRules.Size = new System.Drawing.Size(165, 26);
-            this.editRules.TabIndex = 2;
-            this.editRules.TabStop = true;
-            this.editRules.Text = "Изменить права";
-            this.editRules.UseVisualStyleBackColor = true;
-            this.editRules.CheckedChanged += new System.EventHandler(this.editRules_CheckedChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.editUserButton);
-            this.panel2.Controls.Add(this.addUserButton);
-            this.panel2.Controls.Add(this.positionCombo);
-            this.panel2.Controls.Add(this.rulesLabel);
-            this.panel2.Controls.Add(this.passwordText);
-            this.panel2.Controls.Add(this.userText);
-            this.panel2.Controls.Add(this.password);
-            this.panel2.Controls.Add(this.labelUser);
-            this.panel2.Controls.Add(this.deleteUserButton);
-            this.panel2.Location = new System.Drawing.Point(16, 82);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(569, 340);
-            this.panel2.TabIndex = 26;
-            // 
-            // labelUser
-            // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.labelUser.Location = new System.Drawing.Point(36, 28);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(128, 22);
-            this.labelUser.TabIndex = 0;
-            this.labelUser.Text = "Пользователь";
-            // 
-            // password
-            // 
-            this.password.AutoSize = true;
-            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.password.Location = new System.Drawing.Point(92, 70);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(72, 22);
-            this.password.TabIndex = 1;
-            this.password.Text = "Пароль";
-            // 
-            // userText
-            // 
-            this.userText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.userText.Location = new System.Drawing.Point(195, 26);
-            this.userText.Name = "userText";
-            this.userText.Size = new System.Drawing.Size(215, 27);
-            this.userText.TabIndex = 2;
-            // 
-            // passwordText
-            // 
-            this.passwordText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.passwordText.Location = new System.Drawing.Point(195, 70);
-            this.passwordText.Name = "passwordText";
-            this.passwordText.Size = new System.Drawing.Size(215, 27);
-            this.passwordText.TabIndex = 3;
-            // 
-            // rulesLabel
-            // 
-            this.rulesLabel.AutoSize = true;
-            this.rulesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.rulesLabel.Location = new System.Drawing.Point(60, 119);
-            this.rulesLabel.Name = "rulesLabel";
-            this.rulesLabel.Size = new System.Drawing.Size(104, 22);
-            this.rulesLabel.TabIndex = 4;
-            this.rulesLabel.Text = "Должность";
-            // 
-            // positionCombo
-            // 
-            this.positionCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.positionCombo.FormattingEnabled = true;
-            this.positionCombo.Items.AddRange(new object[] {
-            "Директор",
-            "Администратор",
-            "Оператор"});
-            this.positionCombo.Location = new System.Drawing.Point(195, 116);
-            this.positionCombo.Name = "positionCombo";
-            this.positionCombo.Size = new System.Drawing.Size(215, 28);
-            this.positionCombo.TabIndex = 5;
-            this.positionCombo.SelectedIndexChanged += new System.EventHandler(this.positionCombo_SelectedIndexChanged);
-            // 
-            // addUserButton
-            // 
-            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.addUserButton.Location = new System.Drawing.Point(398, 263);
-            this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(151, 49);
-            this.addUserButton.TabIndex = 6;
-            this.addUserButton.Text = "Добавить";
-            this.addUserButton.UseVisualStyleBackColor = true;
-            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
-            // 
-            // editUserButton
-            // 
-            this.editUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.editUserButton.Location = new System.Drawing.Point(398, 263);
-            this.editUserButton.Name = "editUserButton";
-            this.editUserButton.Size = new System.Drawing.Size(151, 49);
-            this.editUserButton.TabIndex = 7;
-            this.editUserButton.Text = "Изменить";
-            this.editUserButton.UseVisualStyleBackColor = true;
-            this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
-            // 
-            // deleteUserButton
-            // 
-            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.deleteUserButton.Location = new System.Drawing.Point(398, 263);
-            this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(151, 49);
-            this.deleteUserButton.TabIndex = 8;
-            this.deleteUserButton.Text = "Удалить";
-            this.deleteUserButton.UseVisualStyleBackColor = true;
-            this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
+            this.exitButton.AutoSize = true;
+            this.exitButton.Location = new System.Drawing.Point(183, 437);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(14, 13);
+            this.exitButton.TabIndex = 23;
+            this.exitButton.Text = "X";
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // EditDirecct
             // 
@@ -1208,16 +1220,16 @@
             this.StaffChanged.ResumeLayout(false);
             this.StaffChanged.PerformLayout();
             this.tarifPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelUser.ResumeLayout(false);
+            this.panelUser.PerformLayout();
             this.tarifwork.ResumeLayout(false);
             this.tarifwork.PerformLayout();
             this.tarifAddPanel.ResumeLayout(false);
             this.tarifAddPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelUser.ResumeLayout(false);
-            this.panelUser.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1320,5 +1332,6 @@
         private System.Windows.Forms.Button addUserButton;
         private System.Windows.Forms.Button deleteUserButton;
         private System.Windows.Forms.Button editUserButton;
+        private System.Windows.Forms.Label exitButton;
     }
 }

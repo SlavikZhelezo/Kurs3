@@ -109,6 +109,7 @@
             this.passField.Location = new System.Drawing.Point(119, 160);
             this.passField.Multiline = true;
             this.passField.Name = "passField";
+            this.passField.PasswordChar = '*';
             this.passField.Size = new System.Drawing.Size(183, 43);
             this.passField.TabIndex = 5;
             // 
@@ -125,6 +126,7 @@
             this.Controls.Add(this.logText);
             this.Controls.Add(this.panel1);
             this.Name = "Autorization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

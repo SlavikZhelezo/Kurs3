@@ -16,7 +16,7 @@ namespace Kurs3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Director());
+            Application.Run(new Autorization());
         }
     }
 }

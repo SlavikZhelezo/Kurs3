@@ -125,7 +125,8 @@ namespace Kurs3
 
         private void modifyButton_Click(object sender, EventArgs e)
         {
-
+            EditDirecct eddir = new EditDirecct();
+            eddir.Show();
         }
 
         private void positionButton_Click(object sender, EventArgs e)

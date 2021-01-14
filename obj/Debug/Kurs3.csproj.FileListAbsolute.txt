@@ -29,3 +29,4 @@ D:\GUAP Last Seession\Kurs3\obj\Debug\Kurs3.csproj.CopyComplete
 D:\GUAP Last Seession\Kurs3\obj\Debug\Kurs3.Administrator.resources
 D:\GUAP Last Seession\Kurs3\obj\Debug\Kurs3.EditAdmin.resources
 D:\GUAP Last Seession\Kurs3\obj\Debug\Kurs3.Director.resources
+D:\GUAP Last Seession\Kurs3\obj\Debug\Kurs3.EditDirecct.resources

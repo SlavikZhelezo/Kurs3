@@ -53,6 +53,7 @@
     <Compile Include="Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBconnect.cs" />
     <Compile Include="Director.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +72,11 @@
     <Compile Include="EditDirecct.Designer.cs">
       <DependentUpon>EditDirecct.cs</DependentUpon>
     </Compile>
-    <Compile Include="OperForm.cs">
+    <Compile Include="OperMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OperForm.Designer.cs">
-      <DependentUpon>OperForm.cs</DependentUpon>
+    <Compile Include="OperMainForm.Designer.cs">
+      <DependentUpon>OperMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Autorization.cs">
       <SubType>Form</SubType>
@@ -103,8 +104,8 @@
     <EmbeddedResource Include="EditDirecct.resx">
       <DependentUpon>EditDirecct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OperForm.resx">
-      <DependentUpon>OperForm.cs</DependentUpon>
+    <EmbeddedResource Include="OperMainForm.resx">
+      <DependentUpon>OperMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autorization.resx">
       <DependentUpon>Autorization.cs</DependentUpon>
